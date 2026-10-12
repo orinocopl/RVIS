@@ -1,0 +1,545 @@
+options:
+  parameters:
+    author: ''
+    catch_exceptions: 'True'
+    category: '[GRC Hier Blocks]'
+    cmake_opt: ''
+    comment: ''
+    copyright: ''
+    description: ''
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: no_gui
+    hier_block_src_path: '.:'
+    id: nuand2sync
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: 'True'
+    run_command: '{python} -u {filename}'
+    run_options: run
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: Not titled yet
+    window_size: (1000,1000)
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [408, 40.0]
+    rotation: 0
+    state: enabled
+
+blocks:
+- name: bandwidth
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: Bandwidth LP
+    short_id: ''
+    type: eng_float
+    value: '2000000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1208, 40.0]
+    rotation: 0
+    state: enabled
+- name: bladeRF_source_0
+  id: bladeRF_source
+  parameters:
+    affinity: ''
+    alias: ''
+    bias_tee0: 'False'
+    bias_tee1: 'False'
+    buffers: '4096'
+    buflen: '32768'
+    bw: bandwidth
+    comment: ''
+    dac: '10000'
+    dc_calibration: LPF_TUNING
+    dc_offset_mode0: '0'
+    dc_offset_mode1: '0'
+    device_id: 0ab3220d828942b4a34ec09db0c8970c
+    feature: default
+    fpga_image: ''
+    fpga_reload: 'False'
+    freq: tuning
+    gain0: gain4
+    gain1: gain4
+    gain_mode0: 'False'
+    gain_mode1: 'False'
+    if_gain0: '0'
+    if_gain1: '0'
+    in_clk: EXTERNAL
+    iq_balance_mode0: '0'
+    iq_balance_mode1: '0'
+    lpf_mode: disabled
+    maxoutbuf: '0'
+    metadata: 'False'
+    minoutbuf: '0'
+    nchan: '2'
+    out_clk: 'False'
+    ref_clk: '38400000'
+    sample_format: 16bit
+    sample_rate: sps
+    sampling: internal
+    show_pmic: 'False'
+    smb: 38.4e6
+    tamer: internal
+    trigger0: 'True'
+    trigger1: 'False'
+    trigger_role0: master
+    trigger_role1: slave
+    trigger_signal0: J51_1
+    trigger_signal1: J51_1
+    use_dac: 'False'
+    use_ref_clk: 'False'
+    verbosity: verbose
+    xb200: none
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [408, 160.0]
+    rotation: 0
+    state: enabled
+- name: bladeRF_source_0_0
+  id: bladeRF_source
+  parameters:
+    affinity: ''
+    alias: ''
+    bias_tee0: 'False'
+    bias_tee1: 'False'
+    buffers: '4096'
+    buflen: '32768'
+    bw: bandwidth
+    comment: ''
+    dac: '10000'
+    dc_calibration: LPF_TUNING
+    dc_offset_mode0: '0'
+    dc_offset_mode1: '0'
+    device_id: f3e9a1d78d7d4041afd8dbd9ab1a76e4
+    feature: default
+    fpga_image: ''
+    fpga_reload: 'False'
+    freq: tuning
+    gain0: gain4
+    gain1: gain4
+    gain_mode0: 'False'
+    gain_mode1: 'False'
+    if_gain0: '0'
+    if_gain1: '0'
+    in_clk: EXTERNAL
+    iq_balance_mode0: '0'
+    iq_balance_mode1: '0'
+    lpf_mode: disabled
+    maxoutbuf: '0'
+    metadata: 'False'
+    minoutbuf: '0'
+    nchan: '2'
+    out_clk: 'False'
+    ref_clk: '38400000'
+    sample_format: 16bit
+    sample_rate: sps
+    sampling: internal
+    show_pmic: 'False'
+    smb: 38.4e6
+    tamer: internal
+    trigger0: 'True'
+    trigger1: 'False'
+    trigger_role0: slave
+    trigger_role1: slave
+    trigger_signal0: J51_1
+    trigger_signal1: J51_1
+    use_dac: 'False'
+    use_ref_clk: 'False'
+    verbosity: verbose
+    xb200: none
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [408, 584.0]
+    rotation: 0
+    state: enabled
+- name: blocks_complex_to_interleaved_short_0
+  id: blocks_complex_to_interleaved_short
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale_factor: '1.0'
+    vector_output: 'False'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1056, 272.0]
+    rotation: 0
+    state: enabled
+- name: blocks_complex_to_interleaved_short_0_0
+  id: blocks_complex_to_interleaved_short
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale_factor: '1.0'
+    vector_output: 'False'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1056, 384.0]
+    rotation: 0
+    state: enabled
+- name: blocks_complex_to_interleaved_short_0_0_0
+  id: blocks_complex_to_interleaved_short
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale_factor: '1.0'
+    vector_output: 'False'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1056, 808.0]
+    rotation: 0
+    state: enabled
+- name: blocks_complex_to_interleaved_short_0_1
+  id: blocks_complex_to_interleaved_short
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale_factor: '1.0'
+    vector_output: 'False'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1056, 696.0]
+    rotation: 0
+    state: enabled
+- name: blocks_file_sink_0
+  id: blocks_file_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    append: 'False'
+    comment: ''
+    file: /tmp/nuand0.bin
+    type: short
+    unbuffered: 'False'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1256, 264.0]
+    rotation: 0
+    state: enabled
+- name: blocks_file_sink_0_0
+  id: blocks_file_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    append: 'False'
+    comment: ''
+    file: /tmp/nuand1.bin
+    type: short
+    unbuffered: 'False'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1256, 376.0]
+    rotation: 0
+    state: enabled
+- name: blocks_file_sink_0_0_0
+  id: blocks_file_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    append: 'False'
+    comment: ''
+    file: /tmp/nuand3.bin
+    type: short
+    unbuffered: 'False'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1256, 800.0]
+    rotation: 0
+    state: enabled
+- name: blocks_file_sink_0_1
+  id: blocks_file_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    append: 'False'
+    comment: ''
+    file: /tmp/nuand2.bin
+    type: short
+    unbuffered: 'False'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1256, 688.0]
+    rotation: 0
+    state: enabled
+- name: blocks_head_0
+  id: blocks_head
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: nosamples
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [680, 280.0]
+    rotation: 0
+    state: enabled
+- name: blocks_head_0_0
+  id: blocks_head
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: nosamples
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [680, 392.0]
+    rotation: 0
+    state: enabled
+- name: blocks_head_0_0_0
+  id: blocks_head
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: nosamples
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [680, 816.0]
+    rotation: 0
+    state: enabled
+- name: blocks_head_0_1
+  id: blocks_head
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: nosamples
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [680, 704.0]
+    rotation: 0
+    state: enabled
+- name: blocks_multiply_const_vxx_0
+  id: blocks_multiply_const_vxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: '32767'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [864, 280.0]
+    rotation: 0
+    state: enabled
+- name: blocks_multiply_const_vxx_0_0
+  id: blocks_multiply_const_vxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: '32767'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [864, 392.0]
+    rotation: 0
+    state: enabled
+- name: blocks_multiply_const_vxx_0_0_0
+  id: blocks_multiply_const_vxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: '32767'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [864, 816.0]
+    rotation: 0
+    state: enabled
+- name: blocks_multiply_const_vxx_0_1
+  id: blocks_multiply_const_vxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: '32767'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [864, 704.0]
+    rotation: 0
+    state: enabled
+- name: gain4
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: Common Gain
+    short_id: ''
+    type: eng_float
+    value: '-1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [928, 40.0]
+    rotation: 0
+    state: enabled
+- name: nosamples
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: No.samples
+    short_id: ''
+    type: intx
+    value: '50000000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [664, 40.0]
+    rotation: 0
+    state: enabled
+- name: sps
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: Sample Rate
+    short_id: ''
+    type: eng_float
+    value: '10000000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1072, 40.0]
+    rotation: 0
+    state: enabled
+- name: tuning
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: Frequency
+    short_id: ''
+    type: intx
+    value: '868000000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [800, 40.0]
+    rotation: 0
+    state: enabled
+
+connections:
+- [bladeRF_source_0, '0', blocks_head_0, '0']
+- [bladeRF_source_0, '1', blocks_head_0_0, '0']
+- [bladeRF_source_0_0, '0', blocks_head_0_1, '0']
+- [bladeRF_source_0_0, '1', blocks_head_0_0_0, '0']
+- [blocks_complex_to_interleaved_short_0, '0', blocks_file_sink_0, '0']
+- [blocks_complex_to_interleaved_short_0_0, '0', blocks_file_sink_0_0, '0']
+- [blocks_complex_to_interleaved_short_0_0_0, '0', blocks_file_sink_0_0_0, '0']
+- [blocks_complex_to_interleaved_short_0_1, '0', blocks_file_sink_0_1, '0']
+- [blocks_head_0, '0', blocks_multiply_const_vxx_0, '0']
+- [blocks_head_0_0, '0', blocks_multiply_const_vxx_0_0, '0']
+- [blocks_head_0_0_0, '0', blocks_multiply_const_vxx_0_0_0, '0']
+- [blocks_head_0_1, '0', blocks_multiply_const_vxx_0_1, '0']
+- [blocks_multiply_const_vxx_0, '0', blocks_complex_to_interleaved_short_0, '0']
+- [blocks_multiply_const_vxx_0_0, '0', blocks_complex_to_interleaved_short_0_0, '0']
+- [blocks_multiply_const_vxx_0_0_0, '0', blocks_complex_to_interleaved_short_0_0_0,
+  '0']
+- [blocks_multiply_const_vxx_0_1, '0', blocks_complex_to_interleaved_short_0_1, '0']
+
+metadata:
+  file_format: 1
+  grc_version: 3.10.12.0
